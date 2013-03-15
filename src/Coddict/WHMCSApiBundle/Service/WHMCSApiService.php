@@ -15,7 +15,7 @@ class WHMCSApiService
     protected $apiKey;
     
     /**
-     * The WHMCS Hostname (ex: whmcs.myhostingcompany.com
+     * The WHMCS Hostname (ex: whmcs.myhostingcompany.com)
      */
     protected $host;
     
