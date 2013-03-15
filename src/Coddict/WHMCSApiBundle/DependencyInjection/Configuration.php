@@ -25,6 +25,7 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('api_key')->isRequired()->end()
             ->scalarNode('host')->isRequired()->end()
             ->scalarNode('path')->defaultValue("/includes/api.php")->end()
+            ->booleanNode('objects_enabled')->defaultValue(true)->end()
         ->end();
             
 
