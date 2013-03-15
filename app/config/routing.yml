@@ -1,0 +1,5 @@
+coddict_whmcs_api:
+    resource: "@CoddictWHMCSApiBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
