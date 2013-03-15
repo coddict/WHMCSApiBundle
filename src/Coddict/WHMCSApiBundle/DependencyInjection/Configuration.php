@@ -19,6 +19,14 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('coddict_whmcs_api');
+        
+        $rootNode
+            ->children()
+            ->scalarNode('api_key')->isRequired()->end()
+            ->scalarNode('host')->isRequired()->end()
+            ->scalarNode('path')->defaultValue("/includes/api.php")->end()
+        ->end();
+            
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for

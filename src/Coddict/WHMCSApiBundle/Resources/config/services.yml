@@ -1,0 +1,7 @@
+parameters:
+    coddict_whmcs_api.service.classname: Coddict\WHMCSApiBundle\Service\WHMCSApiService
+
+services:
+    coddict.whmcsapi:
+        class: "%coddict_whmcs_api.service.classname%"
+        arguments: ["@service_container", "%coddict_whmcs_api.api_key%", "%coddict_whmcs_api.host%", "%coddict_whmcs_api.path%"]

@@ -19,8 +19,13 @@ class CoddictWHMCSApiExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
+
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
+
+        $container->setParameter("coddict_whmcs_api.api_key", $config["api_key"]);
+        $container->setParameter("coddict_whmcs_api.host", $config["host"]);
+        $container->setParameter("coddict_whmcs_api.path", $config["path"]);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
